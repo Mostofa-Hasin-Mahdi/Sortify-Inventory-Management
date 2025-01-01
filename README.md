@@ -2,7 +2,8 @@
 <b>Welcome to Sortify</b>
 </div>
 <div align="center">
-![Screenshot 2025-01-01 224236](https://github.com/user-attachments/assets/bd4428a1-da97-4bc8-8be8-6e8d535db30f)
+![image](https://github.com/user-attachments/assets/3c275e80-7dd3-4578-ac33-264bb5c1f2af)
+
 
 
 </div>
