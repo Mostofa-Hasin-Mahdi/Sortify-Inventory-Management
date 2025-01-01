@@ -1,4 +1,5 @@
 <div align="center">
 <b>Welcome to Sortify</b>
 </div>
-![image](https://github.com/user-attachments/assets/f7698c25-dc93-4f86-9450-c08920cef923)
+
+![Screenshot 2025-01-01 223533](https://github.com/user-attachments/assets/0707afa2-430c-4c13-b923-96905539057b)
