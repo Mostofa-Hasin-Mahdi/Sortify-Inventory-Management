@@ -2,7 +2,7 @@
 <b>Welcome to Sortify</b>
 </div>
 </div>
-<div align="center" width=50px>
+<div align="center" height=50px>
 
 ![Screenshot 2025-01-01 224236](https://github.com/user-attachments/assets/fc174ac3-ddf9-4a87-8856-ffab54f3ec7c)
 
