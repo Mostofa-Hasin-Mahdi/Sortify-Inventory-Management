@@ -5,7 +5,15 @@
 <div align="center">
 
 ![Screenshot 2025-01-01 224236](https://github.com/user-attachments/assets/fc174ac3-ddf9-4a87-8856-ffab54f3ec7c)
+</div>
+<div align="center">
+<b>4 WEEK Milestone Plan</b>
+</div>
+<div align="center">
+  
+![image](https://github.com/user-attachments/assets/f4e3a950-7248-4a7f-a536-7ec51ab2c2a5)
 
+</div>
 
 </div>
 <div align="center">
