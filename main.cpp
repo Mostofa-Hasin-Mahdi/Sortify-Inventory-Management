@@ -103,8 +103,15 @@ public:
     int user_choice, number_of_items;
 
     sortify() {
-        system("Color 80");
-        cout << "\t\t|Sortify Inventory Management|\t\t\n";
+        system("Color 8F");
+         cout << "\t\t    _                     _  ___       \n";
+    cout << "\t\t   | |               _   (_)/ __)      \n";
+    cout << "\t\t    \\ \\   ___   ____| |_  _| |__ _   _ \n";
+    cout << "\t\t     \\ \\ / _ \\ / ___)  _)| |  __) | | |\n";
+    cout << "\t\t _____) ) |_| | |   | |__| | |  | |_| |\n";
+    cout << "\t\t(______/ \\___/|_|    \\___)_|_|   \\__  |\n";
+    cout << "\t\t                                (____/ \n";
+        cout << "\t\t\tInventory Management\t\t\n\n";
         loginMenu();
     }
 
