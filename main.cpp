@@ -150,7 +150,7 @@ public:
     int user_choice, number_of_items;
 
     sortify() {
-        system("Color 8F");
+        system("Color 80");
          cout << "\t\t    _                     _  ___       \n";
     cout << "\t\t   | |               _   (_)/ __)      \n";
     cout << "\t\t    \\ \\   ___   ____| |_  _| |__ _   _ \n";
@@ -163,13 +163,19 @@ public:
     }
 
     void loginMenu() {
+        system("cls");
         int choice;
         cout << "\t\t1. Register\n";
         cout << "\t\t2. Login\n";
+        cout << "\t\t0. To exit\n";
         cout << "\t\tEnter your choice: ";
         cin >> choice;
 
         switch (choice) {
+        
+        case 0:
+            return;
+        
         case 1:
             registerUser();
             break;
@@ -259,6 +265,9 @@ public:
         switch (user_choice) {
         case 0:
             saveInventory(user_name);
+            head  == NULL;
+            cout<<"\t\tloggin out...";
+            loginMenu();
             break;
         case 1:
             cout << "\t\tHow many items do you want to add?: \t\t\n";
@@ -302,4 +311,4 @@ public:
 int main() {
     sortify app;
     return 0;
-}
+}   
