@@ -97,6 +97,53 @@ void loadInventory(const string& username) {
     file.close();
 }
 
+void updateItem(const string& name, float newPrice, const string& username) {
+    Node* temp = head;
+    while (temp != NULL) {
+        if (temp->item_name == name) {
+            temp->item_price = newPrice;
+            saveInventory(username);
+            cout << "\t\tItem updated successfully!\n";
+            return;
+        }
+        temp = temp->next;
+    }
+    cout << "\t\tItem not found!\n";
+}
+
+void deleteItem(const string& name, const string& username) {
+    Node* temp = head;
+    Node* prev = NULL;
+    while (temp != NULL && temp->item_name != name) {
+        prev = temp;
+        temp = temp->next;
+    }
+    if (temp == NULL) {
+        cout << "\t\tItem not found!\n";
+        return;
+    }
+    if (prev == NULL) {
+        head = temp->next;
+    } else {
+        prev->next = temp->next;
+    }
+    delete temp;
+    saveInventory(username);
+    cout << "\t\tItem deleted successfully!\n";
+}
+
+void searchItem(const string& name) {
+    Node* temp = head;
+    while (temp != NULL) {
+        if (temp->item_name == name) {
+            cout << "\t\tItem found: " << temp->item_name << ", Price: Tk." << temp->item_price << endl;
+            return;
+        }
+        temp = temp->next;
+    }
+    cout << "\t\tItem not found!\n";
+}
+
 class sortify {
 public:
     string user_name;
@@ -207,19 +254,17 @@ public:
 
     void choice() {
         cin >> user_choice;
-
+        string itemName;
+        float itemPrice;
         switch (user_choice) {
         case 0:
             saveInventory(user_name);
             break;
-
-        case 1: {
+        case 1:
             cout << "\t\tHow many items do you want to add?: \t\t\n";
             cin >> number_of_items;
             cout << "\t\tEnter the items: \t\t\n";
             for (int i = 0; i < number_of_items; i++) {
-                string itemName;
-                float itemPrice;
                 cout << i + 1 << ": ";
                 cin >> itemName >> itemPrice;
                 InsertValue(itemName, itemPrice, user_name);
@@ -227,8 +272,26 @@ public:
             showList();
             home();
             break;
-        }
-
+        case 2:
+            cout << "\t\tEnter item name to update: ";
+            cin >> itemName;
+            cout << "\t\tEnter new price: ";
+            cin >> itemPrice;
+            updateItem(itemName, itemPrice, user_name);
+            home();
+            break;
+        case 3:
+            cout << "\t\tEnter item name to search: ";
+            cin >> itemName;
+            searchItem(itemName);
+            home();
+            break;
+        case 4:
+            cout << "\t\tEnter item name to delete: ";
+            cin >> itemName;
+            deleteItem(itemName, user_name);
+            home();
+            break;
         default:
             cout << "\t\tInvalid Choice!\t\t\n";
             home();
